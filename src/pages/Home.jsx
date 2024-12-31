@@ -12,8 +12,10 @@ const Home = () => {
  }, []);
 
  return (
-  <div className="grid grid-cols-6">
-   {items && items.map((item, idx) => <ShowProducts item={item} key={idx} />)}
+  <div className="max-w-6xl mx-auto py-20">
+   <div className="grid grid-cols-6 items-center gap-2">
+    {items && items.map((item, idx) => <ShowProducts item={item} key={idx} />)}
+   </div>
   </div>
  );
 };
