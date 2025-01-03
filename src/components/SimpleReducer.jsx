@@ -10,6 +10,9 @@ const SimpleReducer = () => {
   if (action.type === "increment") {
    return state + action.payload;
   }
+  if (action.type === "decre") {
+   return state - action.payload;
+  }
  }
 
  const handleDecrement = () => {
@@ -39,7 +42,10 @@ const SimpleReducer = () => {
     >
      Increment Count
     </button>
-    <button className="bg-red-200 p-2" onClick={() => dispatch}>
+    <button
+     className="bg-red-200 p-2"
+     onClick={() => dispatch({ type: "decre", payload: 1 })}
+    >
      Decrement Count
     </button>
    </div>
